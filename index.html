@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia | Página Principal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <a href="index.html"><img src="assets/images/wikipedia_logo.svg" width="50"/></a>
+            <a href="index.html"><img src="assets/images/wikipedia_text_logo.svg" width="110"/></a>
+        </figure>
+    </header>
+
+    <hr class="bar" />
+
+    <main>
+        <nav>
+            <h2>Artigos</h2>
+            <ul>
+                <li><strong><a class="indice" href="index.html">Página Inicial</a></strong></li>
+                <li><a class="indice" href="b99.html"><i>Brooklyn Nine-Nine</i></a></li>
+            </ul>
+        </nav>
+        
+        <section class="content">
+            <section class="artigoInicial">
+                <h2>Artigos em Destaque</h2>
+                <article class="destaques">
+                    <section>
+                        <figure>
+                            <a href="b99.html"><img class="poster" src="assets/images/b99_poster.jpg"/></a>
+                            <a class="descricao" href="b99.html"><figcaption>Brooklyn Nine-Nine</figcaption></a>
+                        </figure>
+                    </section>
+                </article>
+            </section>
+        </section>
+
+        <aside>
+            <h2>Neste Artigo</h2>
+            <ul>
+                <li>Selecione um artigo para exibir suas âncoras.</a></li>
+            </ul>
+        </aside>
+
+        <button onclick="topFunction()" id="myBtn" class="topButton" title="Voltar ao Topo"><i class="fa-solid fa-chevron-up"></i></button>
+    </main>
+
+    <hr class="bar" />
+
+    <footer>
+        <section>
+            <strong><i>© 2023 Wikipedia. Todos os direitos reservados.</i></p></strong>
+
+            <p><i>Desenvolvido por <a class="dev" href="https://github.com/eduardofaduraes">Eduardo Figueiredo Almeida Durães</a>para a Formação HTML Web Developer da <a class="dev" href="https://web.dio.me/">Dio.me</a></i></p>
+        </section>
+    </footer>
+
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+        
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
